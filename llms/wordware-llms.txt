@@ -1,0 +1,36 @@
+# Wordware
+
+## Docs
+
+- [API](https://docs.wordware.ai/api.md): Access your WordApps via API
+- [Publish and Deploy](https://docs.wordware.ai/deploy.md): Turn your flows into standalone WordApps, and access them via a clean UI or powerful API
+- [Actions](https://docs.wordware.ai/nodes/actions.md): Supercharge your WordApp with thousands of integrations
+- [Code execution](https://docs.wordware.ai/nodes/code-execution.md): Run some custom Javascript code
+- [Comment](https://docs.wordware.ai/nodes/comment.md): Add notes the LLM can't see
+- [Formatting](https://docs.wordware.ai/nodes/everything-else.md): Text, headings, bulleted and numbered lists, code views, quotes, and images
+- [Flow](https://docs.wordware.ai/nodes/flow.md): Call another flow from inside your own
+- [Generation](https://docs.wordware.ai/nodes/generation.md): Harness the power of AI
+- [Ask a Human](https://docs.wordware.ai/nodes/human.md): Runtime input during flow execution
+- [If-Else](https://docs.wordware.ai/nodes/if-else.md): Let your WordApp make decisions
+- [Input](https://docs.wordware.ai/nodes/input.md): Data for your WordApp to crunch
+- [Loop](https://docs.wordware.ai/nodes/loop.md): Make things happen, and then make them happen again
+- [Mention](https://docs.wordware.ai/nodes/mention.md): Use the @ symbol to magically reference anything
+- [Structured Generation](https://docs.wordware.ai/nodes/structured-generation.md): Harness the power of AI, adding some order to the chaos
+- [Tool](https://docs.wordware.ai/nodes/tool.md): Enhance your WordApp with powerful capabilities
+- [Triggers](https://docs.wordware.ai/nodes/triggers.md): Run your WordApp when something happens
+- [Chatbot](https://docs.wordware.ai/recipes/chatbots.md): Make a chatbot in under 5 minutes
+- [Parsing a PDF](https://docs.wordware.ai/recipes/parsing-a-pdf.md): Add the context of a PDF to your prompt
+- [Tutorials](https://docs.wordware.ai/recipes/tutorials.md): How to create WordApps
+- [Tour](https://docs.wordware.ai/tour.md): Let's take a look around
+- [Workflows](https://docs.wordware.ai/workflows.md): Turn your WordApps into workflows using our powerful Zapier integration
+
+## OpenAPI Specs
+
+- [openapi](https://docs.wordware.ai/api-reference/openapi.json)
+
+## Optional
+
+- [Try it Out](https://wordware.ai)
+- [Join our Discord](https://discord.gg/6Zm5FGC2kR)
+- [Book a Demo](https://app.wordware.ai/book)
+- [Talk to our Founders](mailto:founders@wordware.ai)

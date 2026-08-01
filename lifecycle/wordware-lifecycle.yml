@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wordware.ai/api
+description: >-
+  Lifecycle posture captured from the Wordware docs. Versioning applies per
+  deployed WordApp: every release gets a simplified semantic version
+  (major.minor), each version has its own URLs and IDs, and API callers pin a
+  version in the request body with caret ranges (e.g. "^1.0") to track the
+  latest minor release. The docs flag one planned breaking change (the shape
+  of the final outputs event) "with ample warning" but publish no formal
+  deprecation policy, no Sunset/Deprecation header support, no SLA, and no
+  status page (status.wordware.ai does not resolve).
+versioning:
+  scheme: per-app simple semver (major.minor)
+  selector: request-body "version" field with caret ranges (e.g. "^1.0")
+  docs: https://docs.wordware.ai/api
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No published deprecation policy; docs promise ample warning before the
+    announced breaking change to the outputs event shape.
+sla: null
+status_page: null
+deprecated_operations: []

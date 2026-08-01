@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wordware.ai/api
+description: >-
+  Cross-cutting request/response semantics of the Wordware WordApps API,
+  captured from the API documentation. The surface is a single run endpoint
+  per deployed app with a streaming newline-delimited JSON response; there is
+  no documented idempotency contract, pagination, field expansion, request-id
+  tracing, or rate-limit signaling.
+authentication:
+  style: bearer API key in the Authorization header
+  artifact: authentication/wordware-authentication.yml
+endpoint_pattern: POST https://app.wordware.ai/api/released-app/{app_id}/run
+request:
+  envelope:
+    inputs: >-
+      JSON object keyed by the input names defined in the WordApp; text inputs
+      are plain strings, image and audio inputs are typed objects ({type:
+      image, image_url} / {type: audio, audio_url}) referencing publicly
+      accessible URLs.
+    version: >-
+      required release selector using simplified semver, with caret ranges
+      recommended (e.g. "^1.0" for latest 1.x minor).
+response:
+  style: streaming newline-delimited JSON (one JSON object per line)
+  envelope: >-
+    each line is {value: {...}} where value.type is "generation" (with state
+    start/end and a label), "chunk" (incremental text in value.value), or
+    "outputs" (final outputs keyed by ID and by label).
+  breaking_change_notice: >-
+    docs note the outputs event currently includes everything by ID and by
+    label and that this will likely change in a future breaking change.
+errors:
+  envelope: non-200 responses return a JSON error body; no published error-code catalog
+idempotency: none documented
+pagination: none documented
+field_expansion: none documented
+request_tracing: none documented
+rate_limits: none documented
+versioning:
+  artifact: lifecycle/wordware-lifecycle.yml

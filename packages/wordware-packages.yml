@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=wordware
+description: >-
+  Wordware publishes no first-party client libraries: the API docs
+  (https://docs.wordware.ai/api) show raw HTTP examples (Python requests,
+  JavaScript fetch) rather than SDKs, and searches of npm, PyPI (wordware,
+  wordware-ai, wordware-sdk all 404), and the wordware-ai GitHub org found no
+  official packages. The packages below are community-built wrappers found on
+  npm, recorded for completeness; none are first-party.
+packages:
+- language: javascript
+  registry: npm
+  name: wordware-mcp
+  url: https://www.npmjs.com/package/wordware-mcp
+  install: npx wordware-mcp
+  official: false
+  notes: Community MCP server (v1.4.3, 2025-03-18) that runs deployed Wordware apps as MCP tools.
+- language: javascript
+  registry: npm
+  name: wordware-runner
+  url: https://www.npmjs.com/package/wordware-runner
+  install: npm install wordware-runner
+  official: false
+  notes: Community wrapper that runs Wordware WordApps and parses the streamed output.
+- language: javascript
+  registry: npm
+  name: "@mseep/wordware-mcp"
+  url: https://www.npmjs.com/package/@mseep/wordware-mcp
+  install: npm install @mseep/wordware-mcp
+  official: false
+  notes: Republished mirror of the community wordware-mcp server.

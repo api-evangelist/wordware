@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+docs: https://docs.wordware.ai/api
+description: >-
+  Authentication profile captured from the Wordware API documentation. API
+  keys are generated per user in the app (avatar menu -> API Keys) and passed
+  as a bearer token in the Authorization header on every request to the
+  WordApps run API. No OAuth 2.0, OpenID Connect, or mTLS surface is
+  documented, and no openid-configuration / oauth-authorization-server
+  well-known documents are published (both probed 404).
+summary:
+  types: [http]
+  schemes: [bearer]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  header: "Authorization: Bearer <API_KEY>"
+  key_management: https://app.wordware.ai (Settings -> API Keys)
+  sources: [https://docs.wordware.ai/api.md]

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.wordware.ai/api
+description: >-
+  Cross-cutting standards posture derived from the Wordware API documentation
+  and live probes; Wordware publishes no OpenAPI (the spec linked from
+  docs.wordware.ai/llms.txt returns 404), so assertions rest on the documented
+  API surface.
+standards:
+- id: http-bearer-rfc6750
+  conforms: true
+  evidence: API keys are passed as Authorization Bearer tokens per the API docs.
+- id: oauth2
+  conforms: false
+  evidence: no OAuth flows documented; /.well-known/oauth-authorization-server 404.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration 404 on all hosts.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors are plain JSON bodies; no application/problem+json documented.
+- id: openapi
+  conforms: false
+  evidence: docs reference https://docs.wordware.ai/api-reference/openapi.json but it returns 404 (Mintlify asset not found).
+- id: pagination
+  conforms: false
+  evidence: single streaming run endpoint; no collection/pagination surface documented.
+- id: idempotency
+  conforms: false
+  evidence: no idempotency-key contract documented.
