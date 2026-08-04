@@ -1,6 +1,7 @@
 generated: '2026-07-21'
 method: searched
-status: community
+status: third-party
+status_raw: community
 source: https://www.npmjs.com/package/wordware-mcp
 description: >-
   Wordware operates no official hosted/remote MCP server (no MCP docs page, no
