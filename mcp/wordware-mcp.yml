@@ -3,13 +3,11 @@ method: searched
 status: third-party
 status_raw: community
 source: https://www.npmjs.com/package/wordware-mcp
-description: >-
-  Wordware operates no official hosted/remote MCP server (no MCP docs page, no
-  entry in the official MCP registry, no MCP repo in the wordware-ai GitHub
-  org). A community-built local stdio server, wordware-mcp on npm (v1.4.3,
-  published 2025-03-18 by yuhuangou), exposes deployed Wordware WordApps as
-  MCP tools: it authenticates with a Wordware API key and calls the released-
-  app run endpoint. Recorded as a community server, not a first-party one.
+description: 'Wordware operates no official hosted/remote MCP server (no MCP docs page, no entry in the
+  official MCP registry, no MCP repo in the wordware-ai GitHub org). A community-built local stdio server,
+  wordware-mcp on npm (v1.4.3, published 2025-03-18 by yuhuangou), exposes deployed Wordware WordApps
+  as MCP tools: it authenticates with a Wordware API key and calls the released- app run endpoint. Recorded
+  as a community server, not a first-party one.'
 server:
   name: wordware-mcp
   transport: stdio
@@ -19,9 +17,14 @@ server:
   official: false
   auth: wordware-api-key
 tools:
-  - name: run-wordapp
-    description: >-
-      Runs a deployed Wordware WordApp by app id with named inputs, streaming
-      the flow output (the community server registers one tool per configured
-      app; tool surface depends on the user's own deployed apps).
-    source_operation: https://docs.wordware.ai/api (POST /api/released-app/{app_id}/run)
+- name: run-wordapp
+  description: Runs a deployed Wordware WordApp by app id with named inputs, streaming the flow output
+    (the community server registers one tool per configured app; tool surface depends on the user's own
+    deployed apps).
+  source_operation: https://docs.wordware.ai/api (POST /api/released-app/{app_id}/run)
+deployment:
+  mode: third-party
+  verified: searched
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census
